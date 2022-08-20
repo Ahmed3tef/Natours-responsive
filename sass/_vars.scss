@@ -3,11 +3,21 @@
 $color-main-light: #7ed56f;
 $color-main: #55c57a;
 $color-main-dark: #28b485;
+
+$color-card-1-light: #ffb900;
+$color-card-1-dark: #ff7730;
+
+$color-card-3-light: #2998ff;
+$color-card-3-dark: #5643fa;
+
 $color-text: #777;
+$color-line: #eee;
+
 $color-white: #fff;
 $color-black: #000;
 $color-black-shadow: rgba($color-black, 0.2);
 $color-section-background: #f7f7f7;
+$color-card: rgba($color-white, 0.8);
 
 /// GRADIENTS ///
 
@@ -22,6 +32,22 @@ $linear-gradient-text: linear-gradient(
   rgba(40, 180, 133, 0.8)
 );
 
+$linear-gradient-card-1: linear-gradient(
+  to right bottom,
+  $color-card-1-light,
+  $color-card-1-dark
+);
+$linear-gradient-card-2: linear-gradient(
+  to right bottom,
+  $color-main-light,
+  $color-main-dark
+);
+$linear-gradient-card-3: linear-gradient(
+  to right bottom,
+  $color-card-3-light,
+  $color-card-3-dark
+);
+
 /// SHADOWS ///
 
 $box-shadow-hover: 0 1rem 2rem $color-black-shadow;
@@ -29,6 +55,7 @@ $box-shadow-active: 0 0.5rem 1rem $color-black-shadow;
 $text-shadow: 0.5rem 1rem 2rem $color-black-shadow;
 $img-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
 $img-shadow-hover: 0 2.5rem 4rem rgba($color-black, 0.5);
+$card-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
 
 /// TRANSITION ///
 
@@ -37,17 +64,21 @@ $transition: all 0.2s;
 //
 //
 /// mixins ///
+///
 
-@mixin heading-2($mb) {
-  font-size: 3.5rem;
-  font-weight: 700;
+%gradient-text {
   display: inline-block;
   background-image: $linear-gradient-text;
   background-clip: text;
   color: transparent;
+}
+
+@mixin heading-2($mb) {
+  @extend %gradient-text;
+  font-size: 3.5rem;
+  font-weight: 700;
   letter-spacing: 2px;
   transition: 0.2s all;
-
   margin-bottom: $mb;
 
   &:hover {
