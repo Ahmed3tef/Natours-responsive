@@ -6,6 +6,7 @@ $color-main-dark: #28b485;
 $color-text: #777;
 $color-white: #fff;
 $color-black: #000;
+$color-black-shadow: rgba($color-black, 0.2);
 $color-section-background: #f7f7f7;
 
 /// GRADIENTS ///
@@ -23,9 +24,15 @@ $linear-gradient-text: linear-gradient(
 
 /// SHADOWS ///
 
-$box-shadow-hover: 0 1rem 2rem rgba($color-black, 0.2);
-$box-shadow-active: 0 0.5rem 1rem rgba($color-black, 0.2);
-$text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
+$box-shadow-hover: 0 1rem 2rem $color-black-shadow;
+$box-shadow-active: 0 0.5rem 1rem $color-black-shadow;
+$text-shadow: 0.5rem 1rem 2rem $color-black-shadow;
+$img-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+$img-shadow-hover: 0 2.5rem 4rem rgba($color-black, 0.5);
+
+/// TRANSITION ///
+
+$transition: all 0.2s;
 
 //
 //

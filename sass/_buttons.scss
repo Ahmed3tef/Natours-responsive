@@ -4,7 +4,7 @@
   display: inline-block;
   border-radius: 5rem;
   position: relative;
-  transition: all 0.2s;
+  transition: $transition;
 
   &-white {
     background-color: $color-white;
@@ -45,5 +45,22 @@
   }
 
   &-text {
+    &:visited,
+    &:link {
+      color: $color-main;
+      padding: 3px;
+      border-bottom: 1px solid $color-main;
+      transition: $transition;
+    }
+    &:hover {
+      background-color: $color-main;
+      color: $color-white;
+      box-shadow: $box-shadow-hover;
+      transform: translateY(-2px);
+    }
+    &:active {
+      box-shadow: $box-shadow-active;
+      transform: translateY(0);
+    }
   }
 }

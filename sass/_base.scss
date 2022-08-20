@@ -25,6 +25,7 @@ a:link,
 a:visited {
   text-decoration: none;
   color: $color-text;
+  display: inline-block;
 }
 
 ul {
@@ -34,4 +35,13 @@ ul {
 section {
   padding: 25rem 0;
   text-align: center;
+}
+
+.text__box {
+  &-h {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  &-p {
+  }
 }
