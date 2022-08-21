@@ -9,6 +9,11 @@
   &-white {
     background-color: $color-white;
   }
+  &-green,
+  &-green:visited {
+    background-color: $color-main;
+    color: $color-white;
+  }
 
   &-animated {
     animation: moveUp 0.5s ease-out 0.5s;

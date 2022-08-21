@@ -125,6 +125,10 @@ section {
 .button-white {
   background-color: #fff;
 }
+.button-green, .button-green:visited {
+  background-color: #55c57a;
+  color: #fff;
+}
 .button-animated {
   -webkit-animation: moveUp 0.5s ease-out 0.5s;
           animation: moveUp 0.5s ease-out 0.5s;
@@ -304,6 +308,9 @@ section {
   transform: skewY(2deg) skewX(15deg) scale(1.1);
   text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
 }
+.tours .row {
+  margin-bottom: 10rem;
+}
 .tours__card {
   perspective: 150rem;
   -moz-perspective: 150rem;
@@ -422,4 +429,42 @@ section {
 .tours__card--price-value {
   font-size: 6rem;
   font-weight: 100;
+}
+@media only screen and (max-width: 56.25em), only screen and (hover: none) {
+  .tours__card {
+    height: auto;
+    border-radius: 3px;
+    background-color: #fff;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  }
+  .tours__card--side {
+    height: auto;
+    position: relative;
+    box-shadow: none;
+  }
+  .tours__card--side--back {
+    transform: rotateY(0);
+    -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+  }
+  .tours__card:hover .tours__card--side--front {
+    transform: rotateY(0);
+  }
+  .tours__card--details {
+    padding: 1rem 3rem;
+  }
+  .tours__card--cta {
+    position: relative;
+    top: 0%;
+    left: 0;
+    transform: translate(0);
+    width: 100%;
+    padding: 7rem 4rem 4rem 4rem;
+  }
+  .tours__card--price-box {
+    margin-bottom: 3rem;
+  }
+  .tours__card--price-value {
+    font-size: 4rem;
+  }
 }
